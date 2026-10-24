@@ -1,0 +1,231 @@
+html, body, body * {
+    overflow-y: hidden !important;
+}
+
+.xmlviewer-card {
+    height: var(--xmlviewer-panel-height, auto);
+    box-sizing: border-box;
+    overflow-y: auto !important;
+    padding: 14px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    background: var(--color-main-background);
+    text-align: left;
+}
+
+.xmlviewer-tabs {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin: 0;
+    border: 1px solid var(--color-border);
+    border-bottom: 0;
+    border-radius: 8px 8px 0 0;
+    background: var(--color-background-hover, var(--color-main-background));
+}
+
+.xmlviewer-tabs [role="tab"] {
+    min-width: 0;
+    padding: 12px 14px;
+    appearance: none;
+    border: 0;
+    border-right: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    border-radius: 0 !important;
+    background: transparent !important;
+    color: var(--color-main-text);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    box-shadow: none;
+}
+
+.xmlviewer-tabs [role="tab"]:last-child {
+    border-right: 0;
+}
+
+.xmlviewer-tabs [role="tab"][aria-selected="true"] {
+    border-bottom-color: var(--color-main-background);
+    background: var(--color-main-background) !important;
+    color: var(--color-main-text);
+}
+
+.xmlviewer-panels {
+    margin-top: -1px;
+}
+
+.xmlviewer-panels [role="tabpanel"][hidden] {
+    display: none !important;
+}
+
+.xmlviewer-card h2 {
+    margin: 0 0 12px;
+    font-size: 18px;
+}
+
+.xmlviewer-empty {
+    color: var(--color-text-maxcontrast);
+}
+
+.xmlviewer-flex-container{
+	display: flex;
+}
+
+.xmlviewer-pet-species {
+	margin-left: 12px !important;
+}
+
+.xmlviewer-artifact {
+	margin-bottom: 60px;
+}
+
+.xmlviewer-artifact:last-child {
+	margin-bottom: 0px;
+}
+
+.xmlviewer-artifact-tables {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.xmlviewer-artifact-properties {
+	table-layout: fixed;
+}
+
+.xmlviewer-artifact-properties td:first-child,
+.xmlviewer-artifact-properties td:nth-child(2) {
+	width: 50%;
+}
+
+.xmlviewer-flex-container td:first-child {
+    width: 150px;
+}
+
+.xmlviewer-flex-container td:nth-child(2) {
+    width: 300px;
+}
+
+.xmlviewer-table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+	overflow-wrap: anywhere;
+}
+
+.xmlviewer-table-single-column {
+    overflow-x: visible;
+}
+
+#xmlviewer .xmlviewer-table-single-column table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+#xmlviewer .xmlviewer-table-single-column th,
+#xmlviewer .xmlviewer-table-single-column td {
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+}
+
+.xmlviewer-table-50 {
+    width: 50%;
+    border-collapse: collapse;
+}
+
+.xmlviewer-table-100 {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#xmlviewer th, #xmlviewer td {
+    padding: 9px 12px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--color-border);
+}
+
+#xmlviewer th {
+    background: var(--color-main-background);
+}
+
+#xmlviewer tbody tr:nth-child(even) {
+    background: var(--color-background-hover);
+}
+
+#xmlviewer.xmlviewer-public h2, #xmlviewer.xmlviewer-public h3, #xmlviewer.xmlviewer-public p, #xmlviewer.xmlviewer-public th, #xmlviewer.xmlviewer-public td, #xmlviewer.xmlviewer-public .xmlviewer-tabs [role="tab"] {
+    color: var(--color-main-text);
+}
+
+.gap-50 {
+	gap: 50px;
+}
+
+.gap-100 {
+	gap: 100px;
+}
+
+#xmlviewer .no-table tbody tr td{
+    background: var(--color-main-background);
+	height: 30px;
+	border-bottom: none;
+}
+
+@media (max-width: 700px) {
+    .xmlviewer-tabs {
+        display: flex;
+        overflow-x: auto;
+    }
+
+    .xmlviewer-tabs [role="tab"] {
+        flex: 0 0 auto;
+    }
+	
+	.xmlviewer-flex-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+	.xmlviewer-artifact-tables {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+    .xmlviewer-flex-container > div {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .xmlviewer-flex-container table,
+    .xmlviewer-flex-container .xmlviewer-table-50 {
+        width: 100%;
+        table-layout: fixed;
+    }
+
+	.xmlviewer-artifact-properties th,
+	.xmlviewer-artifact-properties td {
+		white-space: normal !important;
+		overflow-wrap: anywhere;
+	}
+
+	.xmlviewer-flex-container td:first-child {
+		width: 50%;
+	}
+
+	.xmlviewer-flex-container td:nth-child(2) {
+		width: 50%;
+	}
+
+    .xmlviewer-table-wrap {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+	
+	.gap-50 {
+		gap: 10px;
+	}
+	
+	.gap-100 {
+		gap: 20px;
+	}
+}
