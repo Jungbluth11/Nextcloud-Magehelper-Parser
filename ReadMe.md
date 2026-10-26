@@ -1,6 +1,6 @@
 # Magehelper Betrachter für Nextcloud
 
-Dieser Parser ergänzt den [XML-Betrachter für Nextcloud](https://github.com/Jungbluth11/XmlViewer) um die Unterstützung für [Magehelper](https://github.com/Jungbluth11/Magehelper)-Datein.
+Dieser Parser ergänzt den [XML-Betrachter für Nextcloud](https://github.com/Jungbluth11/XmlViewer) um die Unterstützung für [Magehelper](https://github.com/Jungbluth11/Magehelper)-Dateien.
 
 ## Voraussetzungen
 
